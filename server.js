@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
   res.send('API de Batimentos Cardíacos está funcionando!');
 });
 
-// Rota POST para receber os batimentos cardíacos
-app.post('/heart-rate', (req, res) => {
-  const bpm = req.body.bpm;  // Obtém o valor dos batimentos enviado pelo aplicativo
+// Altere a rota POST de "/heart-rate" para "/"
+app.post('/', (req, res) => {
+  const bpm = req.body.bpm; // Obtém o valor dos batimentos enviado pelo aplicativo
   console.log(`Batimentos recebidos: ${bpm} BPM`);
 
   // Retorna uma resposta de sucesso
